@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+    
+*{font-family: 'Josefin Sans', sans-serif;}
+
+
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+
+
+#exampleFormControlInput1{width: 60%; height:35px; }
+#title_box{width: 60%; height:35px; text-align: center;}
+
+textarea{min-height: 300px; min-width: 800px; padding: 20px; border: solid 1px #c0c0c0;
+font-size: 14px;}
+
+#right_buttons{text-align: right;}
+
+#top_td{text-align: right;}
+#title_td{text-align: center;}
+#name_td{text-align: center;}
+
+#backtolist{ width: 800px;}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+	<mapper namespace="com.study.springboot.dao.IReviewDao">
+		<select id="review_list" resultType="com.study.springboot.dto.ReviewDto"> 
+			select * from review where item_idx_fk = #{param1} order by review_idx desc
+		</select>
+		
+		<insert id="reviewForm" parameterType="com.study.springboot.dto.ReviewDto">
+	      insert into review (review_idx, item_idx_fk, review_image, review_date, review_name, review_content, review_score)
+	           values (review_seq.nextval, #{item_idx_fk}, #{review_image}, sysdate,  #{review_name},  #{review_content}, #{review_score})
+	    </insert>
+
+		<select id="itemListReview" resultType="com.study.springboot.dto.ReviewDto"> 
+			select * from review where review_idx = #{param1}
+		</select>
+		
+		<insert id="review_write">
+			  <selectKey keyProperty="id" resultType="int" order="BEFORE">
+			        select review_seq.nextval FROM DUAL
+			  </selectKey>
+		      INSERT INTO review(review_idx, item_idx_fk, review_image, review_date, review_name, review_content, review_score)
+		      VALUES (#{id}, #{param1}, #{param2}, sysdate, #{param3}, #{param4}, #{param5})
+   		</insert>
+   		
+   		<delete id="review_delete">
+            delete from review where review_idx = #{param1}
+        </delete>
+		
+	</mapper>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+	<mapper namespace="com.study.springboot.dao.IItemsDao">
+
+		<select id="list" resultType="com.study.springboot.dto.ItemsDto"> 
+			select * from items order by item_idx
+		</select>
+		
+		<select id="listPageDao" resultType="com.study.springboot.dto.ItemsDto">
+		   	SELECT * FROM
+			(
+				SELECT 
+					ROWNUM AS RNUM, items.* 
+				FROM 
+					items 
+				ORDER BY item_idx desc
+				)
+			WHERE
+			RNUM BETWEEN #{param1} AND #{param2}
+	    </select>
+		 <delete id="item_delete">
+            delete from items where item_idx = #{param1}
+        </delete>
+        
+        <select id="item_correction" resultType="com.study.springboot.dto.ItemsDto"> 
+            select * from items where item_idx = #{param1}
+        </select>
+        
+        <insert id="itemsRegisterForm" parameterType="com.study.springboot.dto.ItemsDto">
+          insert into items (item_idx, item_category, item_option, item_name, item_price, item_MainImg, item_img, item_content, item_date)
+               values (items_seq.nextval, #{item_category},#{item_option}, #{item_name}, #{item_price},  #{item_MainImg},  #{item_img}, #{item_content}, sysdate)
+        </insert>
+       
+        <update id="itemsUpdate">
+            update items set item_category = #{param2}, item_name = #{param3}, item_price = #{param4}, 
+            item_option = #{param5}, item_MainImg = #{param6}, item_img = #{param7}, item_content = #{param8} WHERE item_idx = #{param1}
+        </update>
+     
+        <select id="itemsContent" resultType="com.study.springboot.dto.ItemsDto"> 
+            select * from items where item_idx = #{param1}
+        </select>
+		
+		<select id="newList" resultType="com.study.springboot.dto.ItemsDto"> 
+			select * from items where item_option like '%New%'
+		</select>
+		
+		<select id="bestList" resultType="com.study.springboot.dto.ItemsDto"> 
+			select * from items where item_option like '%Best%'
+		</select>
+		
+		<select id="ringList" resultType="com.study.springboot.dto.ItemsDto"> 
+			select * from items where item_category like '%Ring%'
+		</select>
+		
+		<select id="necklaceList" resultType="com.study.springboot.dto.ItemsDto"> 
+			select * from items where item_category like '%Necklace%'
+		</select>
+		
+		<select id="braceletList" resultType="com.study.springboot.dto.ItemsDto"> 
+			select * from items where item_category like '%Bracelet%'
+		</select>
+		
+		<select id="earringsList" resultType="com.study.springboot.dto.ItemsDto"> 
+			select * from items where item_category like '%Earrings%'
+		</select>
+		
+	<insert id="write">
+	  <selectKey keyProperty="id" resultType="int" order="BEFORE">
+	        select items_seq.nextval FROM DUAL
+	  </selectKey>
+      INSERT INTO items(item_idx, item_category, item_name, item_price, item_option, item_MainImg, item_img, item_content, item_date) 
+      VALUES (#{id}, #{param1}, #{param2}, #{param3}, #{param4}, #{param5}, #{param6}, #{param7}, sysdate)
+   </insert>
+		
+	<select id="InfoCheckView" resultType="com.study.springboot.dto.MemberDto">
+			select * from items where item_idx = #{param1}
+	</select>	
+		
+	</mapper>

@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+    
+*{font-family: 'Josefin Sans', sans-serif;}
+
+.notice_text{display: flex; flex-direction: column; align-items: center;
+text-align: center;}
+.notice_text div:nth-of-type(3){color: grey;}
+.notice_table_div{display: flex; flex-direction: column; align-items: center;
+text-align: center; }
+
+table th:nth-of-type(1){width: 100px;}
+table th:nth-of-type(2){width: 150px;}
+table th:nth-of-type(3){width: 700px;}
+table th:nth-of-type(4){width: 150px;}
+table th:nth-of-type(5){width: 150px;}
+
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.title {
+	border: solid grey 2px;
+	width: 300px;
+	text-align: center;
+}
+
+.search_bar{transform: translate(390px, -29px)}
+
+
+table {
+
+	width: 1000px;
+	text-align: center;
+}
+
+
+
+
+.qa {
+  width: 100%;
+}
+.qa table {
+  width: 100%;
+  height: auto;
+  border-top: none;
+  border-bottom: 1px solid rgb(236, 236, 236);
+}
+.qa tr {
+  border-bottom: 1px solid rgb(236, 236, 236);
+  height: 50px;
+}
+.qa td:nth-child(2) {
+
+  padding-left: 20px;
+}
+.qa table tr:nth-child(1) {
+  background-color: #ffdcdc;
+  color: #484848;
+}
+.qa td {
+  color: #777;
+  font-size: 14px;
+}
+
+
+img{width: 100px; height: 100px}
+
+.buttons{display: flex; width: 100%;
+    justify-content: right;
+}
+
+

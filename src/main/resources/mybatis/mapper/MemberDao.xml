@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+    <mapper namespace="com.study.springboot.dao.IMemberDao">
+	
+		<select id="MemberList" resultType="com.study.springboot.dto.MemberDto">
+			select * from member order by member_idx desc
+		</select>
+		
+		<select id="MemberView" resultType="com.study.springboot.dto.MemberDto">
+			select * from member where member_idx = #{param1}
+		</select>
+		
+		<delete id="deleteMember">
+			delete from member where member_idx = #{param1}
+		</delete>
+		
+		<update id="updateMember">
+			update member set member_id=#{param2}, member_pw=#{param3}, member_name=#{param4}, member_email1=#{param5}, member_email2=#{param6}, 
+							member_phone=#{param7}, member_postcode=#{param8}, member_address1=#{param9}, member_address2=#{param10}, 
+							member_gender=#{param11}
+						 where member_idx=#{param1}
+		</update>
+		
+		<insert id="joinMember" parameterType="com.study.springboot.dto.MemberDto">
+				insert into member ( member_idx,
+										member_id,
+										member_email1,
+										member_email2,
+										member_name,
+										member_pw,
+										member_phone,
+										member_postcode,
+										member_address1,
+										member_address2,
+										member_birthdate,
+										member_gender,
+										member_joindate )
+				values ( member_seq.nextval, 
+							#{ member_id }, 
+							#{ member_email1 },
+							#{ member_email2 }, 
+							#{ member_name }, 
+							#{ member_pw }, 
+							#{ member_phone },
+							#{ member_postcode }, 
+							#{ member_address1 },
+							#{ member_address2 }, 
+							#{ member_birthdate }, 
+							#{ member_gender }, 
+							sysdate)
+		</insert>
+		
+		<select id="idCheck" resultType="int">
+			SELECT COUNT(*) FROM member WHERE member_id=#{param1}
+		</select>
+		
+		<select id="loginMember" resultType="_int">
+			select COUNT(*) from member where member_id = #{param1} and member_pw = #{param2}
+		</select>
+		
+		<select id="FindId" resultType="com.study.springboot.dto.MemberDto">
+			SELECT * FROM member WHERE member_name = #{ param1 } AND member_email1 = #{ param2 } AND member_email2 = #{ param3 }
+		</select>
+		
+		<select id="FindPw" resultType="com.study.springboot.dto.MemberDto">
+			SELECT * FROM member WHERE member_name = #{ param1 } AND member_id = #{ param2 } AND member_email1 = #{ param3 } AND member_email2 = #{ param4 }
+		</select>
+		
+		<select id="myInfoCheck" resultType="_int">
+			select count(*) from member where member_id = #{param1} and member_pw = #{param2}
+		</select>
+		
+		<select id="MyInfoCheckView" resultType="com.study.springboot.dto.MemberDto">
+			select * from member where member_id = #{param1}
+		</select>
+	
+		<select id="MyInfoChangeView" resultType="com.study.springboot.dto.MemberDto">
+			select * from member where member_id = #{param1}
+		</select>
+				
+	</mapper>

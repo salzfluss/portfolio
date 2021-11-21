@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+    /*           carousel 시작          */
+    .carousel{
+        margin:15px 0px;
+    }
+    .carousel-item {
+        position: relative; 
+    }
+    .carousel-item img{
+        width:100%;
+        height:auto;
+        line-height: auto;
+        align-items: center;
+        margin:auto;
+
+    }
+    /* carousel 애니메이션 효과 - animation-delay는 바로 위쪽에 */
+    .animated {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+    .fadeInDown {
+        animation-name: fadeInDown;
+    }
+    .fadeInUp {
+        animation-name: fadeInUp;
+    }
+
+
+    /*       new update box        */
+    .new_item_bar{
+        height: 130px;
+        line-height: 130px;
+        margin-top:100px;
+        background-color: #eedaf1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .new_item_bar h3{
+        color:#b093bd;
+        font-weight: bold;
+    }
+    /*         new_item info부분           */
+    .new_item_sec01{
+        /* border:5px solid green; */
+        display: flex;
+        width: 100%; 
+        margin: auto; 
+        display: flex;
+        flex-direction: column; 
+        text-align: center;   
+    }
+    .new_item_sec02{
+        /* border:5px solid green; */
+        display: flex;
+        width: 100%; 
+        margin: auto; 
+        display: flex;
+        flex-direction: column; 
+        text-align: center;   
+    }
+
+
+    .new_contents {
+        display: flex; 
+        flex-flow: row wrap; 
+        margin: 30px 10px 30px 10px;    
+        justify-content: space-around;
+    }
+    .new_content {
+        width: 100%; 
+        height: 100%; 
+        padding: 0 00px 37.5px 00px;  
+        border: 1px solid rgba(148, 146, 146, 0.5);
+        margin:0px 5px;
+        flex: 1 22%;
+        max-width: 350px;
+        max-height: 480px; 
+    }
+    .new_content img {
+        height: 80%;
+        width:80%;
+    }
+    .new_content h3 {
+        font-size: 18px; font-weight: bold;
+        text-align: start; margin: 10px 15px 15px 15px;
+        padding-left: 15px;
+    }
+    .new_content h5 {
+        border-top:1px solid rgba(148, 146, 146, 0.5);
+        font-size: 15px;
+        font-weight: bold;
+        text-align: start;
+        margin: 5px 15px 10px 15px;
+        padding:10px 15px;
+        padding-left: 15px;
+    }
+    .item_info {
+        height: 100px;
+        line-height: 100px;
+        padding-top: 10px;
+    }
+
+    /*      transition 효과       */
+    .new_content:hover .new_img  {
+        opacity: 0.6; transform: scale(1.1); 
+    }
+    .new_content:hover h3 {
+        color: #002a62; 
+    }
+    .new_wrap {
+        background-color: rgb(255, 255, 255); overflow: hidden;
+    }
+    .new_img {
+        display: block;
+        -webkit-transition: 0.5s ease;
+        transition: 0.5s ease; 
+    }
+
+    /*              best item bar              */
+    .best_item_bar{
+        height:210px;
+        line-height: 210px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .best_bar_img img{
+        width:720px;
+        height:200px;
+        align-items: center;
+        justify-content: center;
+    }
+    /*              best item sec              */
+    .best_title{
+        background-color: #eedaf1;
+        height:70px;
+        line-height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .best_title h3{
+        padding-top:10px;
+        color:#b093bd;
+        font-weight: bold;
+    }

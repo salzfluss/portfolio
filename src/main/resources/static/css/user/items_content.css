@@ -1,0 +1,385 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+}
+#wrapper {
+  width: 600px;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+  color: #aaaaaa;
+}
+li {
+  list-style: none;
+}
+a:hover {
+  text-decoration: none;
+  color: #bebebe;
+}
+
+/*      header       */
+.top_sec {
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  background-color: #ffdcdc;
+  display: flex;
+  justify-content: flex-end;
+}
+.top_list {
+  display: flex;
+}
+.top_list li {
+  margin: 0px 10px 0px 10px;
+  font-size: 17px;
+}
+
+.search_sec {
+  margin-right: 20px;
+}
+.search_sec input {
+  height: 23px;
+  width: 140px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px 0px 0px 5px;
+}
+.search_btn {
+  height: 21px;
+  width: 21px;
+  background-color: none;
+}
+.search_btn img {
+  height: 23px;
+  width: 21px;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.logo {
+  height: 170px;
+  line-height: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo img {
+  height: 85px;
+  width: 150px;
+}
+
+.menu_sec {
+  border-top: 1px solid #b4b4b4;
+  border-bottom: 1px solid #b4b4b4;
+  height: 60px;
+  line-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu_bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu_bar01 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu_bar li {
+  padding: 0px 25px;
+}
+.menu_bar01 li {
+  padding: 0px 25px;
+}
+.dropdown-menu {
+  border-radius: 0;
+}
+/* 화살표 제거 */
+.dropdown-toggle::after {
+  border: none;
+}
+/* 마우스오버시 팝업 */
+.dropdown:hover .dropdown-menu {
+  display: block;
+  /* 팝업메뉴가 닫히지 않도록 */
+  margin-top: 0;
+}
+
+/*          footer           */
+.footer {
+  background-color: #f5e7e7;
+  height: 230px;
+  margin-top: 50px;
+  padding-top: 40px;
+}
+.sns_sec {
+  display: flex;
+  height: 50px;
+  line-height: 50px;
+  align-items: center;
+  justify-content: center;
+}
+i {
+  font-size: 30px;
+  margin: 0px 7px;
+}
+.footer_menu {
+  display: flex;
+  height: 30px;
+  line-height: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.footer_menu li {
+  margin-left: 20px;
+  font-size: 13px;
+}
+.footer_info {
+  height: 100px;
+  text-align: center;
+}
+.footer_info p {
+  margin: 0;
+  font-size: 12px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+.order {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 50px;
+}
+
+.order_list {
+  display: flex;
+}
+
+.order_list li {
+  height: 40px;
+}
+.section {
+  text-align: center;
+}
+.section_nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: white;
+}
+.section_nav div {
+  border: solid 1px #aaaaaa;
+  border-bottom: solid 2px #585858;
+  border-right: none;
+  width: 250px;
+  height: 40px;
+}
+.section_nav a {
+  width: 250px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail_section ul {
+  /* border-bottom: solid 1px #b4b4b4; */
+  margin: 0 50px;
+  /* text-align: center; */
+}
+
+.detail_section li {
+  /* border-left: solid 2px #8d8d8d; */
+  margin: 20px;
+
+  /* padding-left: 10px; */
+}
+
+.detailPage_Post {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.new_img {
+    display: block;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease; 
+}
+
+.new_img img {
+    width: 480px;
+    height: 620px;
+}
+
+.detailPage_Post pre {
+  color: #525252;
+  font-family: "Josefin Sans", sans-serif;
+  margin-top: 70px;
+}
+
+.btn_wrap {
+  display: flex;
+}
+.btn_wrap button {
+  border: 3px solid #ffdcdc;
+  width: 200px;
+  height: 50px;
+  border-radius: 30px;
+
+  font-size: 14px;
+  display: block;
+  background-color: white;
+
+  outline: 0;
+}
+
+#review,
+#qna {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#review textarea {
+  resize: none;
+  width: 1000px;
+  height: 150px;
+  font-weight: normal;
+  font-size: 14px;
+  padding: 10px;
+}
+#qna table {
+  width: 950px;
+}
+#qna tr {
+  border-bottom: solid 0.5px #aaaaaa;
+  color: #b4b4b4;
+  height: 50px;
+}
+
+/* Review dorp */
+#menu {
+  width: 1080px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.review {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding-left: 20px;
+  border-top: solid 1px #b4b4b4;
+}
+
+.view {
+  display: flex;
+  justify-content: space-between;
+  border-top: solid 1px #b4b4b4;
+  height: 200px;
+  padding-top: 10px;
+}
+
+.view > span > p {
+  padding-top: 10px;
+}
+
+/* 파일업로드 */
+input.upload_text {
+  /*읽기전용 인풋텍스트*/
+  float: left;
+  width: 230px;
+  /* 버튼 포함 전체 가로 길이*/
+  height: 19px;
+  /* line-height: 19px; */
+  padding: 0 3px;
+  padding-top: 8px;
+  border: none;
+}
+
+div.upload-btn_wrap input.input_file {
+  /*파일찾기 폼 투명하게*/
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -ms-filter: "alpha(opacity=0)";
+  -moz-opacity: 0;
+}
+
+div.upload-btn_wrap {
+  /*버튼테두리 감싼 div*/
+  overflow: hidden;
+  position: relative;
+  float: left;
+  width: 150px;
+  /*width, height 값은 button(찾아보기)값과 같아야함 */
+  height: 35px;
+}
+
+div.upload-btn_wrap button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*버튼 div*/
+  width: 150px;
+  height: 35px;
+  font-weight: bold;
+  background: rgb(255, 255, 255);
+  border: 1px solid #333;
+  color: #484848;
+}
+
+#review_button {
+  width: 150px;
+  border: 1px solid #333;
+  background-color: white;
+  padding-top: 5px;
+}
+
+#qna_button {
+  margin-top: 10px;
+  width: 150px;
+  border: 1px solid #333;
+  background-color: white;
+  padding-top: 5px;
+}
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: transparent;
+}
+input:focus:-moz-placeholder,
+textarea:focus:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: transparent;
+}
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: transparent;
+}
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: transparent;
+}

@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+/* 화살표 제거 */
+    .dropdown-toggle::after { border: none; }
+    /* 마우스오버시 팝업 */
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        /* 팝업메뉴가 닫히지 않도록 */
+        margin-top: 0; 
+    }
+    /*           my page section            */
+    #mypage_sec{
+        display: flex;
+        width: 98%;
+        margin: 0 auto;
+    }
+    #mypage_sec button{
+        background-color: rgb(238, 222, 222);
+        color:#484848;
+        border:1px solid #bdbdbd;
+    }
+    .state_btn{
+        border-radius: 4px;
+        width:80px;
+        height:30px;
+        margin-top:7px;
+        font-size: 14px;
+    }
+    #qna_btn{
+        width:200px;
+        height: 70px;
+        border-radius: 7px;
+        font-size: 15px;
+    }
+
+    .mypage_list li{
+        border:1px solid rgb(199, 199, 199);
+        height:70px;
+        line-height: 70px;
+        text-align: center;
+        justify-content: center;
+    }
+    .mypage_list li:hover{
+        background-color: #ffdcdc;
+    }
+    .mypage_list h3{
+        padding:20px 0 10px 3px;
+    }
+    .mypage_box{
+        flex-grow: 2;
+        padding-left: 20px;
+    }
+    .page_title{
+        font-size: 25px;
+        padding:20px 0px 10px 0px ;
+        border-bottom:2px solid #d4a5a5;
+    }
+    #order_num_box{
+        border:2px solid #b68484;
+        border-top:none;
+        height:60px;
+        line-height: 60px;
+        justify-content: center;
+        padding-left:10px;
+        margin-bottom: 10px;
+    }
+    .orderDetail_table{
+        width:100%;
+    }
+    .orderDetail_table th{ 
+        border-top:2px solid #d4a5a5;
+        height:50px;
+        text-align: center;
+    }
+    .orderDetail_table td{ 
+        border-top:1px solid #d4a5a5;
+        border-bottom:1px solid #d4a5a5;
+        height:120px;
+        text-align: center;
+    }
+    .pay_price_table{
+        width:100%;
+        border-bottom:2px solid #d4a5a5;
+    }
+    .pay_price_table th{
+        height:50px;
+    }
+    .pay_price_table tr{
+        height: 50px;
+    }
+    .pay_price_table td{
+        width:20%;
+        height:40px;
+    }
+    .last_tr{
+        border-top: 1px solid #d4a5a5;
+    }
+
+    #basic_info{
+        border-top:2px solid #d4a5a5;
+        border-bottom:1px solid #d4a5a5;
+    }
+    .myinfo_body tr{
+        height:70px;
+    }
+    .myinfo_body td{
+        width:800px;
+    }
+    .btn_box{
+        height: 100px;
+        text-align: center;
+        margin-top:30px;
+    }
+    .back_btn{
+        background-color: rgb(238, 222, 222);
+        color:#484848;
+        border:1px solid #bdbdbd;
+        width:150px;
+        height:50px;
+        border-radius: 5px;
+    }

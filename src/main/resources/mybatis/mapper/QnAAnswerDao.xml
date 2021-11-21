@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+    	<mapper namespace="com.study.springboot.dao.IQnAAnswerDao">
+    	
+    		<select id="qna_answer_list" resultType="com.study.springboot.dto.QnAAnswerDto"> 
+				select * from qna_answer where qna_answer_idx_fk = #{param1} order by qna_answer_idx
+			</select>
+		
+			<insert id="qna_answer_form" parameterType="com.study.springboot.dto.QnAAnswerDto">
+		      insert into qna_answer (qna_answer_idx, qna_answer_idx_fk, qna_answer_name, qna_answer_content, qna_answer_state, qna_answer_date)
+		           values (qna_answer_seq.nextval, #{qna_answer_idx_fk}, 'Bijou', #{qna_answer_content},  '1',  sysdate)
+		    </insert>
+		    
+		    <delete id="qna_answer_delete">
+	            delete from qna_answer where qna_answer_idx = #{param1}
+	        </delete>
+			
+		</mapper>

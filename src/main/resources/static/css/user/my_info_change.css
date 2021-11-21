@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+/*           my page section            */
+    #mypage_sec{
+        display: flex;
+        width: 98%;
+        margin: 0 auto;
+    }
+
+    #qna_btn{
+        background-color: rgb(238, 222, 222);
+        color:#484848;
+        border:1px solid #bdbdbd;
+        width:200px;
+        height: 70px;
+        border-radius: 7px;
+        font-size: 15px;
+    }
+
+    .mypage_list li{
+        border:1px solid rgb(199, 199, 199);
+        height:70px;
+        line-height: 70px;
+        text-align: center;
+        justify-content: center;
+    }
+    .mypage_list li:hover{
+        background-color: #ffdcdc;
+    }
+    .mypage_list h3{
+        padding:20px 0 10px 3px;
+    }
+    .mypage_box{
+        flex-grow: 2;
+        padding-left: 20px;
+    }
+    .page_title{
+        font-size: 25px;
+        padding:20px 0px 10px 0px ;
+    }
+
+    #basic_info{
+        border-top:3px solid #d4a5a5;
+        border-bottom:3px solid #d4a5a5;
+        padding:20px 0px 20px 0px;
+    }
+    .myinfo_body tr{
+        height:70px;
+    }
+    .myinfo_body th{
+        text-align: center;
+    }
+    .myinfo_body td{
+        width:800px;
+    }
+    .MS_input_txt{
+        height:40px;
+        width:230px;
+        border:1px solid #d6d6d6;
+    }
+    .modify_btn{
+        width:150px;
+        height:40px;
+        border-radius: 2px;
+        border:1px solid #c78e8e;
+        background-color: #d4afaf;
+        color:white;
+        margin:0px 15px 0px 5px;
+        font-size: 14px;
+    }
+    
+    /*          추가정보           */
+    .add_title{
+        margin-top:70px;
+    }
+    #add_info{
+        border-top:3px solid #d4a5a5;
+        border-bottom:3px solid #d4a5a5;
+    }
+
+    #benefit_box{
+        margin-top:20px;
+        margin-left:10px;
+    }
+    #benefit_box01{
+        margin-left:50px;
+    }
+    #check_btn_box{
+        height:100px;
+        line-height: 100px;
+        padding-top:20px;
+        text-align: center;
+        justify-content: center;
+    }
+    .check_btn{
+        width:150px;
+        height:50px;
+        line-height: 50px;
+        border:1px solid gray;
+        justify-content: center;
+        border-radius: 3px;
+    }
+    .txt01{
+        font-size: 13px;
+        color:#8d8d8d;
+    }
+    .radio01{
+        font-size: 14px;
+        margin-left: 2px;
+        font-family: 'Nanum Gothic', sans-serif;
+    }

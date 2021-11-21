@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+   <mapper namespace="com.study.springboot.dao.IOne2oneDao"> 
+   
+	<select id="list" resultType="com.study.springboot.dto.One2oneDto"> 
+		select * from one2one order by one2one_idx desc
+	</select>
+	
+	<select id="listPageDao" resultType="com.study.springboot.dto.One2oneDto">
+	SELECT * FROM
+	(
+		SELECT 
+			ROWNUM AS RNUM, one2one.* 
+		FROM 
+			one2one 
+		ORDER BY one2one_idx desc
+		)
+	WHERE
+	RNUM BETWEEN #{param1} AND #{param2} </select>
+	
+	<select id="viewDao" resultType="com.study.springboot.dto.One2oneDto"> 
+		select * from one2one where one2one_idx = #{param1}
+	</select>
+	
+	<update id="modify">
+		UPDATE one2one SET one2one_category=#{param2}, one2one_img=#{param3}, one2one_name=#{param4}, one2one_pw=#{param5}, one2one_title=#{param6}, one2one_content=#{param6} WHERE one2one_idx=#{param1}
+	</update>
+	
+	<insert id="write">
+	  <selectKey keyProperty="id" resultType="int" order="BEFORE">
+	        select one2one_seq.nextval FROM DUAL
+	  </selectKey>
+      INSERT INTO one2one(one2one_idx, one2one_category, one2one_img, one2one_name, one2one_pw, one2one_title, one2one_content, one2one_date) 
+      VALUES (#{id}, #{param1}, #{param2}, #{param3}, #{param4}, #{param5}, #{param5}, sysdate)
+   </insert>
+   
+   <delete id="delete">
+		delete from one2one where one2one_idx = #{param1}
+	</delete>
+	
+	</mapper>
+
+
+
+
+
+	<!--  <insert id="write" parameterType="com.study.springboot.dto.One2oneDto"> 
+		INSERT INTO one2one VALUES 
+		(one2one_seq.nextval, #{one2one_category},#{one2one_img},#{one2one_name},#{one2one_title},#{one2one_content}, sysdate)
+	</insert>
+	-->
+	
+	

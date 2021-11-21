@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+.sub_box{
+        display: flex;
+        height: 120px;
+        border-top: 1px solid #d4a5a5;
+        border-bottom: 2px solid #d4a5a5;
+    }
+    .sub_name{
+        display: flex;
+        flex-grow: 7;
+        justify-content: center;
+        align-items:center;
+        color:#484848;
+    }
+    .item_register{
+        margin:0 auto;
+        width:90%;
+        padding-left: 20px;
+    }
+
+    .orderer_body tr{
+        height:80px;
+        width:90%;
+        border-bottom:1px solid #eed8d8;
+    }
+    .orderer_body th{
+        padding-left: 20px;
+        width:10%;
+    }
+    .orderer_body td{
+        width:70%;
+        padding-left: 10px;
+    }
+    .MS_input_txt{
+        height:40px;
+        width:230px;
+        border:1px solid #d6d6d6;
+    }
+    .select_box{
+        height:40px;
+        width:150px;
+        border:1px solid #d6d6d6;
+        text-align: center;
+    }
+    #notice_contents{
+        margin:20px 0px;
+        border-radius: 3px;
+        border:1px solid #b1b1b1;
+    }
+
+    .button_box{
+        margin:30px 0px;
+        text-align: center;
+        align-items: center;
+    }
+    .register_btn{
+        border:1px solid #d4a5a5;
+        width:150px;
+        height:40px;
+        border-radius: 3px;
+        background-color: #e2bcbc;
+    }
+    .cancle_btn{
+        border:1px solid #d4a5a5;
+        width:150px;
+        height:40px;
+        border-radius: 3px;
+    }
+
+    input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder 
+    { /* WebKit browsers */ color:transparent; } 
+    input:focus:-moz-placeholder, textarea:focus:-moz-placeholder 
+    { /* Mozilla Firefox 4 to 18 */ color:transparent; } 
+    input:focus::-moz-placeholder, textarea:focus::-moz-placeholder 
+    { /* Mozilla Firefox 19+ */ color:transparent; } 
+    input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder 
+    { /* Internet Explorer 10+ */ color:transparent; }

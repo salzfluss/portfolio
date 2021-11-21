@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+	<mapper namespace="com.study.springboot.dao.IItemsQnADao">
+		<select id="items_qna_list" resultType="com.study.springboot.dto.ItemsQnADto"> 
+			select * from items_qna where items_qna_idx_fk = #{param1} order by items_qna_idx desc
+		</select>
+		
+		<select id="itemQnAview" resultType="com.study.springboot.dto.ItemsQnADto"> 
+			select * from items_qna where items_qna_idx = #{param1}
+		</select>
+		
+		<insert id="itemsQnAForm" parameterType="com.study.springboot.dto.ItemsQnADto">
+	      insert into items_qna (items_qna_idx, items_qna_idx_fk, items_qna_title, items_qna_name, items_qna_password, items_qna_secret, items_qna_content, items_qna_date, items_qna_hit)
+	           values (items_qna_seq.nextval, #{items_qna_idx_fk}, #{items_qna_title}, #{items_qna_name},  #{items_qna_password},  #{items_qna_secret}, #{items_qna_content},  sysdate, 0)
+	    </insert>
+	    
+	    <update id="itemsQnAUpdate">
+			update items_qna set items_qna_title = #{param2}, items_qna_name = #{param3}, 
+			items_qna_password = #{param4}, items_qna_secret = #{param5}, items_qna_content = #{param6}  WHERE items_qna_idx = #{param1}
+		</update>
+	</mapper>

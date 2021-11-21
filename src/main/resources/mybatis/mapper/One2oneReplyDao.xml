@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+    <mapper namespace="com.study.springboot.dao.IOne2oneReplyDao">
+    
+    <select id="list" resultType="com.study.springboot.dto.One2oneReplyDto"> 
+		select * from one2one_reply where one2one_reply_idx = #{param1}
+	</select>
+	
+	<select id="reply_list" resultType="com.study.springboot.dto.One2oneReplyDto"> 
+		select one2one_reply_idx from one2one_reply where one2one_reply_idx = #{param1}
+	</select>
+	
+	<update id="modify">
+		UPDATE one2one_reply SET one2one_reply_name=#{param2}, one2one_reply_title=#{param3}, one2one_reply_content=#{param4} WHERE one2one_reply_idx=#{param1}
+	</update>
+	
+	
+	
+	
+	<!--  <insert id="reply" parameterType="com.study.springboot.dto.One2oneReplyDto">
+      insert into one2one_reply (one2one_reply_idx, one2one_reply_name, one2one_reply_title, one2one_reply_content, one2one_reply_date)
+           values (one2one_reply__seq.nextval, #{one2one_reply_name}, #{one2one_reply_title}, #{one2one_reply_content}, #{sysdate})
+   </insert>-->
+   
+   <insert id="reply">
+	  <selectKey keyProperty="id" resultType="int" order="BEFORE">
+	        select one2one_reply_seq.nextval FROM DUAL
+	  </selectKey>
+      INSERT INTO one2one_reply(one2one_reply_idx, one2one_reply_name, one2one_reply_title, one2one_reply_content, one2one_reply_date) 
+      VALUES (#{param1}, #{param2}, #{param3}, #{param4}, sysdate)
+   </insert>
+	
+	</mapper>
+	
+	
+	  <!-- MySQL 방식 -->
+	<!-- MyBatis insert 후 PK(auto_increment)값 바로 가져오기 -->
+	<!-- MySQL : useGeneratedKeys - auto increment 기능 사용 -->
+	<!--         keyProperty - AI 매칭되는 키   -->
+	
+	<!--  <insert id="writeDao_mySQL" useGeneratedKeys="true" keyProperty="id">
+      insert into simple_bbs (id, writer, title, content)
+           values (simple_bbs_seq.nextval, #{param1}, #{param2}, #{param3})
+   </insert> -->
+   
+   <!-- Oracle : 방식1 -->
+   <!--  <insert id="writeDto" parameterType="com.study.Ex09_Mybatis.dto.SimpleBbsDto">
+      insert into simple_bbs (id, writer, title, content)
+           values (simple_bbs_seq.nextval, #{writer}, #{title}, #{content})
+   </insert> -->
+	<!-- 멤버변수이름으로도 가능 :  parameterType을 입력해줘야 됨. -->
+   
+   <!-- Oracle : 방식2 -->
+   <!--  <insert id="writeDao">
+	  <selectKey keyProperty="id" resultType="int" order="BEFORE">
+	        select simple_bbs_seq.nextval FROM DUAL
+	  </selectKey>
+      insert into simple_bbs (id, writer, title, content)
+           values (#{id}, #{param1}, #{param2}, #{param3})
+   </insert> -->
+
+	<!-- <delete id="deleteDao">
+		delete from simple_bbs where id = #{param1}
+	</delete>
+	
+	<update id="updateDao">
+		update simple_bbs set writer = #{param2}, title = #{param3}, 
+		     content = #{param4} WHERE id = #{param1}
+	</update>--> 

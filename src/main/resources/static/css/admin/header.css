@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+			
+            *{ margin:0; padding:0; 
+            
+          	font-family: 'Josefin', sans-serif;
+            }
+            a{
+                text-decoration: none;
+                color:#484848;
+            }
+
+            /*      top nav 부분         */
+            .top_fix{
+                
+                height:35px;
+                font-size: 12px;
+            }
+            .top_nav{
+                background-color: #ffdcdc;
+                height:30px;
+                /* border:1px solid blue; */
+            }
+            .top_nav li{
+                /* border:1px solid red; */
+                color:#484848;
+                font-size: 13px;
+                list-style: none;
+                float: right;
+                display: flex;
+                margin:5px 5px;
+            }
+            .top_nav a{
+           		color: #484848;
+           	}
+            .top_nav li:first-child{
+                margin-right: 15px;
+            }
+
+            /*       logo 부분        */
+            .logo{
+                /* border:1px solid orange; */
+                height:120px;
+                display: flex;
+                justify-content:center;
+                align-items:center;
+                padding-top: 20px;
+            }
+            .logo img{
+                align-items: center;
+                width:190px;
+                height:106px;
+            }
+
+
+            /*      section 게시판 부분      */
+            .section{
+                display: flex;
+            }
+            /* side_nav 왼쪽 */
+            .side_nav{
+                /* border:1px solid #484848; */
+                width: 150px;
+                flex-grow: 1;
+            }
+            .side_nav li{
+                border:1px solid #484848;
+                border-bottom: none;
+                height:50px;
+                line-height: 50px;
+                text-align: center;
+                list-style:none;
+            }
+            #last_li{
+                border-bottom:1px solid #484848;
+            }
+
+            .side_nav li:hover{
+                background-color: rgb(163, 163, 163);
+            }
+            .side_nav a{
+                color:black;
+            } 
+            .side_nav a:hover{
+                color:white;
+            } 
+            .side_nav a:active{
+                color:white;
+            }
+            /* content 오른쪽 */
+            .content{
+                /* border:1px solid purple; */
+                flex-grow: 2;
+                padding: 50px 100px;
+			}

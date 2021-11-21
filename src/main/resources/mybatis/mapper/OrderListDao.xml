@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+    <mapper namespace="com.study.springboot.dao.IOrderListDao">
+	
+		<select id="OrderList" resultType="com.study.springboot.dto.OrderListDto">
+			select * from order_list order by order_list_idx desc
+		</select>
+		
+		<select id="OrderReceipt" resultType="com.study.springboot.dto.OrderListDto">
+			select * from order_list where order_user_id = #{param1}
+		</select>
+		
+		<select id="OrderListView" resultType="com.study.springboot.dto.OrderListDto">
+			select * from order_list where order_list_idx = #{param1}
+		</select>
+		
+		<delete id="deleteOrderList">
+			delete from order_list where order_list_idx = #{param1}
+		</delete>
+		
+		<select id="MyOrderList" resultType="com.study.springboot.dto.OrderListDto">
+			select * from order_list where order_user_id = #{param1}
+		</select>
+		
+		<select id="MyOrderInfo" resultType="com.study.springboot.dto.OrderListDto">
+			select * from order_list where order_number = #{param1}
+		</select>
+		
+
+	   
+	   <insert id="write">
+		  <selectKey keyProperty="id" resultType="int" order="BEFORE">
+		        select order_list_seq.nextval FROM DUAL
+		  </selectKey>
+	      INSERT INTO order_list(order_list_idx, order_number, order_user, order_user_id, order_user_phone, order_user_address, order_item_img, order_item_info, order_amount, order_date, order_request, order_payment, order_status, order_total_payment) 
+	       VALUES (#{id}, #{param1}, #{param2}, #{param3}, #{param4}, #{param5}, #{param6}, #{param7}, #{param8}, sysdate, #{param9}, #{param10}, #{param11}, #{param12})
+	   </insert>
+	   
+		
+		
+	</mapper>

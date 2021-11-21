@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+    
+*{font-family: 'Josefin Sans', sans-serif;}
+
+
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+table{width: 800px; height: auto; }
+td{padding: 5px; }
+
+#exampleFormControlInput1{width: 60%; height:35px; }
+#title_box{width: 60%; height:35px; text-align: center;}
+
+textarea{min-height: 300px; min-width: 800px; padding: 20px; border: solid 1px #c0c0c0;
+font-size: 14px;}
+
+#right_buttons{text-align: right;}
+
+#top_td{text-align: right;}
+#title_td{text-align: center;}
+#name_td{text-align: center;}
+
+.ck.ck-editor{max-width: 800px;}
+.ck-editor__editable {
+    min-height: 400px;
+}
+
+#image_container{ width: 100px; height: 100px; display: flex;}
+img{width: 100px; height: 100px; padding: 5px;}
+
+.bigPictureWrapper {
+			position: absolute;
+			display: none;
+			justify-content: center;
+			align-items: center;
+			top:0%;
+			width:100%;
+			height:100%;
+			background-color: gray; 
+			z-index: 100;
+			background:rgba(255,255,255,0.5);
+		}
+		.bigPicture {
+			position: relative;
+			display:flex;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		.bigPicture img {
+			width: 80%; height: 80%;
+		}
+	

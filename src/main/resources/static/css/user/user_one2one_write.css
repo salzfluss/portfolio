@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+    
+*{font-family: 'Josefin Sans', sans-serif;}
+
+.ck.ck-editor{max-width: 800px;}
+.ck-editor__editable {
+    min-height: 400px;
+}
+
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+table{width: 800px; height: auto; }
+th, td{padding: 5px;}
+
+
+#left_td{width: 20%; }
+#right_td{width: 70%;}
+#exampleFormControlInput1{width: 100%; height:35px; }
+#exampleFormControlSelect1{width: 145px ; height:35px; font-size:13px;}
+
+
+.buttons{display: flex; width: 800px; padding:10px;
+    justify-content: space-between;
+}
+
+.select {
+  position: relative;
+}
+
+.select .option-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.select.active .option-list {
+  max-height: none;
+}
+
+/* 테마 적용하기 */
+#theme {}
+#theme .select {
+  box-shadow: 0 0 2px rgba(0,0,0,0.3);
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+#theme .select:hover {
+  color: #333;
+  transition: all .3s;
+}
+#theme .select .text {color: #484848;}
+#theme .select .option-list {
+  list-style: none;
+  padding: 0;
+  border-radius: 5px;
+  box-shadow: 0 0 2px rgba(0,0,0,0.3);
+}
+#theme .select .option-list .option {
+  padding: 10px 15px;
+}
+#theme .select .option-list .option:hover {
+  background-color: #f2f2f2;
+}
+
+
+.select{ z-index: 1;}
+.option-list{	background-color: #ffffff;
+    opacity:1; /* 80% 투명도 */}
+    
+    #editor{z-index: 0;}
+    
+#image_container{ width: 100px; height: 100px; display: flex; padding: 5px;}
+img{width: 100px; height: 100px; padding: 5px;}
+
+.bigPictureWrapper {
+			position: absolute;
+			display: none;
+			justify-content: center;
+			align-items: center;
+			top:0%;
+			width:100%;
+			height:100%;
+			background-color: gray; 
+			z-index: 100;
+			background:rgba(255,255,255,0.5);
+		}
+		.bigPicture {
+			position: relative;
+			display:flex;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		.bigPicture img {
+			width: 80%; height: 80%;
+		}

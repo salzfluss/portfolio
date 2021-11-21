@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+	/* content 오른쪽 */
+    .sub_box{
+        display: flex;
+        height: 100px;
+        border-top: 1px solid #d4a5a5;
+        padding-top:20px;
+        margin-right:25px;
+        }
+    .sub_name{
+        display: flex;
+        flex-grow: 7;
+        justify-content: center;
+        align-items:center;
+        color:#484848;
+    }
+
+    .sub_search{
+        display: flex;
+        flex-grow: 0.1;
+        justify-content: center;
+        align-items:center;
+    }
+    .sub_search input{
+        height:25px;
+        line-height:25px;
+        justify-content: center;
+        align-items:center;
+        color:#8b8b8b;
+    }
+    .search_btn{
+        padding:1px 9px;
+        margin-left:5px;
+        font-size: 14px;
+        border:1px solid #888888;
+        border-radius: 2px;
+    }
+    .sub_box{
+        display: flex;
+        height: 120px;
+        border-top: 1px solid #d4a5a5;
+        border-bottom: 1px solid #d4a5a5;
+        
+    }
+    .sub_name{
+        display: flex;
+        flex-grow: 7;
+        justify-content: center;
+        align-items:center;
+        color:#484848;
+    }
+    .member_list{
+        flex-grow: 2;
+        padding-left: 20px;
+    }
+    .member_list form > input {
+        height: 30px;
+    }
+    .member_list table{
+        width: 98%;
+        text-align: center;
+    }
+    th{
+        background-color: #f7e7e7;
+    }
+    .member_list tr{
+        border-top:1px solid #d4a5a5;
+        height: 70px;
+        color:#484848;
+    }
+    .member_list tr:last-child{
+        border-bottom:2px solid #d4a5a5;
+    }
+
+    /*     글쓰기 버튼 부분      */
+    .back_sec{
+        display: flex; 
+        justify-content: center;
+        margin: 30px auto;
+    }
+    .back_btn{
+        width:150px;
+        height:50px;
+        background-color: #e2bcbc;
+        border:1px solid #d4a5a5;
+        border-radius: 3px;
+        color:white;
+        margin: auto 15px;
+    }
+    .clear_btn{
+        width:150px;
+        height:50px;
+        background-color: #d4a5a5;
+        border:1px solid #d4a5a5;
+        border-radius: 3px;
+        color:#484848;
+        margin: auto 15px;
+    }

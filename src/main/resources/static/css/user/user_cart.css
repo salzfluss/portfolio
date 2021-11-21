@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+/*      cart order list     */
+    .cart_title{
+        margin-top:30px;
+        margin-left:10px;
+    }
+    .cart{
+    margin:0 auto;
+    width:90%;
+    
+    }
+    table{
+        margin-top:20px;
+    }
+    thead{
+        border-top:2px solid #eecccc;
+        border-bottom:1px solid #eed8d8;
+        height:70px;
+        line-height: 70px;
+        text-align: center;
+    }
+
+    tbody{
+        border-bottom:2px solid #eecccc;
+        height:120px;
+    }
+    tbody td{
+        text-align: center;
+    }
+    #count{
+        border:1px solid rgb(209, 209, 209);
+        background-color: rgb(255, 255, 255);
+        padding:7px 15px;
+        font-size: 18px;
+    }
+
+    .btn_qty{
+        align-items: center;
+        justify-content: center;
+    }
+    .btn_qty button{
+        border:1px solid rgb(209, 209, 209);
+        background-color: rgb(255, 255, 255);
+        padding:3px 13px;
+        font-size: 18px;
+        font-weight: none;
+    }
+    .change_btn{
+       border:1px solid rgb(209, 209, 209);
+        border-radius: 3px;
+        background-color: rgb(255, 255, 255);
+        padding:4px 7px;
+        font-size: 13px;
+    }
+    .delete_btn{
+        border:1px solid rgb(209, 209, 209);
+        border-radius: 3px;
+        background-color: rgb(255, 255, 255);
+        padding:4px 7px;
+        font-size: 13px;
+    }
+       .all_btn{
+        border:1px solid rgb(209, 209, 209);
+        border-radius: 3px;
+        background-color: rgb(255, 255, 255);
+        padding:4px 7px;
+        font-size: 13px;
+    }
+       .delete_allbtn{
+        border:1px solid rgb(209, 209, 209);
+        border-radius: 3px;
+        background-color: rgb(255, 255, 255);
+        padding:4px 7px;
+        font-size: 13px;
+    }
+
+    /*             order price sec                  */
+    .order_price{
+        margin:30px 10px;
+     
+    }
+    .total_price{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: left;
+        font-size: 20px;
+    }
+    .deli_price{
+        border-bottom:1px solid #eed8d8;
+        display: flex;
+        justify-content: flex-end;
+        font-size: 20px;
+        margin-top:20px;
+        padding:20px 0px;
+    }
+    .btn_sec{
+        margin-right:10px;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .order_btn{
+        border:1px solid rgb(209, 209, 209);
+        border-radius: 30px;
+        background-color: rgb(170, 121, 121);
+        padding:15px 60px;
+        color:white;
+        font-size: 18px;
+    }
+    
+    .img_sec{width: 100px; height:100px; text-align:center;}
+    
+    img{width: 150px; height: 150px;}
+    
+    .cart_table{ width: 100%;}
+    
+     #transport{ transform: translate(-10px, 0) } 

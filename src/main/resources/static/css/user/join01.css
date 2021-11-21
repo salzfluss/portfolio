@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+		.join_page {
+            width: 100%;
+            height: auto;
+            margin: 100px auto;
+            color: #484848;
+        }
+        h3 {
+            margin: 90px 0;
+            text-align: center;
+        }
+        .join_table {
+            margin: 20px auto;
+            width: 430px;
+        }
+        table tr td{
+            padding: 10px 0;
+            color: #484848;
+        }
+        .id_input{
+            width: 250px;
+            height: 40px;
+            color: lightgrey;
+        }
+        .idcheck{
+            margin: 10px 20px;
+            width: 100px;
+            height: 40px;
+            border: 2px solid gray;
+            font-size: 15px;
+            color: lightgrey;
+            background-color: white;
+            border-radius: 20px;
+        }
+        .email_input {
+            width: 190px;
+            height: 40px;
+            color: lightgrey;
+            margin: 0 5px;
+        }
+        .infoBox {
+            width: 400px;
+            height: 40px;
+            color: lightgrey;
+        }
+        .phone {
+            width: 115px;
+            height: 40px;
+            color: lightgrey;
+            margin: 0 10px;
+        }
+        .postcode{
+            width: 250px;
+            height: 40px;
+            color: lightgrey;
+        }
+        .search_pc{
+            margin: 10px 20px;
+            width: 100px;
+            height: 40px;
+            border: 2px solid gray;
+            font-size: 15px;
+            color: lightgrey;
+            background-color: white;
+            border-radius: 20px;
+        }
+		td input[type=radio]{
+			margin-right: 10px;
+		}
+        td input[type=radio]:last-child{
+            margin-left: 30px;
+            margin-bottom: 50px;
+        }
+        td input[type=checkbox]{
+        	margin-right: 10px;
+        }
+        .join_bt{
+            text-align: center;
+        }
+        .join_bt input{
+            margin: 50px auto;
+            text-align: center;
+            width: 200px;
+            height: 55px;
+            border: 2px solid black;
+            font-size: 15px;
+            color: #484848;
+            background-color: white;
+            border-radius: 30px;
+        }
+        
+      

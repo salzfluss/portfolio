@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+   <mapper namespace="com.study.springboot.dao.ICartDao"> 
+   
+	<select id="list" resultType="com.study.springboot.dto.cartDto"> 
+		select * from cart order by cart_item_idx desc
+	</select>
+	
+	<select id="cartlist" resultType="com.study.springboot.dto.cartDto"> 
+		select * from cart where cart_member_id = #{param1}
+	</select>
+	
+	<select id="viewDao" resultType="com.study.springboot.dto.cartDto"> 
+		select * from cart where cart_item_idx = #{param1}
+	</select>
+	
+	
+   <delete id="delete">
+		delete from cart where cart_item_idx = #{param1}
+	</delete>
+	
+	<insert id="write">
+	  <selectKey keyProperty="id" resultType="int" order="BEFORE">
+	        select cart_seq.nextval FROM DUAL
+	  </selectKey>
+      INSERT INTO cart(cart_item_idx, cart_member_id, cart_item_category, cart_item_name, cart_item_price, cart_item_amount, cart_item_img, cart_item_content) 
+      VALUES (#{id}, #{param1}, #{param2}, #{param3}, #{param4}, #{param5}, #{param6}, #{param7})
+   </insert>
+   
+   <select id="itemsContent" resultType="com.study.springboot.dto.cartDto"> 
+			select * from cart where cart_item_idx = #{param1}
+		</select>
+		
+	<update id="modify">
+		UPDATE cart SET cart_item_amount=#{param2} WHERE cart_item_idx=#{param1}
+	</update>
+	
+	
+	</mapper>

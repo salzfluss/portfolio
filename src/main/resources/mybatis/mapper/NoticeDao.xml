@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+    <mapper namespace="com.study.springboot.dao.INoticeDao">
+    
+    <select id="listPageDao" resultType="com.study.springboot.dto.NoticeDto">
+	SELECT * FROM
+	(
+		SELECT 
+			ROWNUM AS RNUM, notice.* 
+		FROM 
+			notice 
+		ORDER BY notice_idx desc
+		)
+	WHERE
+	RNUM BETWEEN #{param1} AND #{param2} </select>
+	
+	<update id="hit">
+		UPDATE notice SET notice_hit=notice_hit+1 WHERE notice_idx=#{param1}
+	</update>
+	
+	<select id="contentView" resultType="com.study.springboot.dto.NoticeDto">
+		select * from notice where notice_idx=#{param1} 
+	</select>
+	
+	<select resultType="com.study.springboot.dto.NoticeDto" id="noticeList"> select * from notice order by notice_date desc </select>
+
+	<select resultType="com.study.springboot.dto.NoticeDto" id="noticeContents"> select * from notice where notice_idx = #{param1} </select>
+
+
+	<insert id="writeNotice">
+	
+		<selectKey resultType="int" order="BEFORE" keyProperty="id">select notice_seq.nextval FROM DUAL </selectKey>
+		insert into notice (notice_idx, notice_name, notice_title, notice_img, notice_content, notice_date)
+		values (#{id}, #{param1}, #{param2}, #{param3}, #{param4}, sysdate) 
+		
+	</insert>
+	
+	<delete id="deleteNotice">delete from notice where notice_idx = #{param1} </delete>
+	
+	<update id="updateNotice">update notice set notice_name = #{param2}, notice_title = #{param3}, notice_img = #{param4}, notice_content = #{param5} WHERE notice_idx = #{param1} </update>
+	
+	<update id="noticeHit">update notice set notice_hit = notice_hit+1WHERE notice_idx = #{param1} </update>
+	
+	</mapper>
